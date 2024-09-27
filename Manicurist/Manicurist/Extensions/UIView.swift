@@ -44,3 +44,10 @@ extension UIView {
     }
     
 }
+
+extension Array {
+    func validate() -> Bool {
+        guard let arr = self as? [UITextField] else { return false }
+        return !arr.contains(where: { $0.text?.isEmpty ?? true })
+    }
+}

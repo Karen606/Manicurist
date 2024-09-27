@@ -17,6 +17,28 @@ extension UIViewController {
         }
     }
     
+    func setNavigationCancelButton() {
+        let cancelButton = UIButton(type: .custom)
+        cancelButton.setTitle("Cancel", for: .normal)
+        cancelButton.titleLabel?.font = .medium(size: 18)
+        cancelButton.setTitleColor(.baseRed, for: .normal)
+        cancelButton.addTarget(self, action: #selector(clickedBackButton), for: .touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: cancelButton)
+    }
+    
+    func setNavigationMenuButton() {
+        let menuButton = UIButton(type: .custom)
+        menuButton.setImage(UIImage(named: "Menu"), for: .normal)
+        menuButton.addTarget(self, action: #selector(clickedMenu), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
+    }
+    
+    @objc func clickedMenu() {
+        if let menuVC = navigationController?.viewControllers.first(where: { $0 is MenuViewController }) {
+            self.navigationController?.popToViewController(menuVC, animated: true)
+        }
+    }
+    
     @objc func clickedBackButton() {
         navigationController?.popViewController(animated: true)
     }

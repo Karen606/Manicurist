@@ -47,5 +47,15 @@ class MenuViewController: UIViewController {
             self.bottomStackView.addBlurEffect()
         })
     }
-
+    
+    @IBAction func clickedRecordManagment(_ sender: UIButton) {
+        let recordsVC = RecordsViewController(nibName: "RecordsViewController", bundle: nil)
+        self.navigationController?.pushViewController(recordsVC, animated: true)
+    }
+    
+    @IBAction func clickedCatalog(_ sender: UIButton) {
+    }
+    
+    @IBAction func clickedMaterials(_ sender: UIButton) {
+    }
 }

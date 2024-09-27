@@ -24,6 +24,10 @@ extension UIFont {
         return UIFont(name: .bold, size: CGFloat(size))
     }
     
+    static func italicMedium(size: CFloat) -> UIFont? {
+        return UIFont(name: .italicMedium, size: CGFloat(size))
+    }
+    
     static func displayRegular(size: CFloat) -> UIFont? {
         return UIFont(name: .displayRegular, size: CGFloat(size))
     }
