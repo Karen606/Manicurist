@@ -44,7 +44,7 @@ extension UIViewController {
         if let menuVC = navigationController?.viewControllers.first(where: { $0 is MenuViewController }) {
             self.navigationController?.popToViewController(menuVC, animated: true)
         } else if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
-            let menuVC = UIStoryboard(name: "Menu", bundle: .main).instantiateViewController(identifier: "MenuViewController")
+            let menuVC = UIStoryboard(name: "Menu", bundle: .main).instantiateViewController(identifier: "NavigationViewController")
             sceneDelegate.window?.rootViewController = menuVC
         }
     }

@@ -12,6 +12,12 @@
 		6B0C1CB62CA88C9500C701D1 /* BaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CB52CA88C9500C701D1 /* BaseTextView.swift */; };
 		6B0C1CB82CA8B80800C701D1 /* MuseoModerno-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CB72CA8B80800C701D1 /* MuseoModerno-Regular.ttf */; };
 		6B0C1CBB2CA8B94900C701D1 /* DesignFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CBA2CA8B94900C701D1 /* DesignFormViewModel.swift */; };
+		6B0C1CBE2CA99D5300C701D1 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CBD2CA99D5300C701D1 /* NavigationViewController.swift */; };
+		6B0C1CC22CA9A25100C701D1 /* MaterialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CC12CA9A25100C701D1 /* MaterialsViewModel.swift */; };
+		6B0C1CC62CA9A34B00C701D1 /* MaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CC52CA9A34B00C701D1 /* MaterialModel.swift */; };
+		6B0C1CC92CA9A79000C701D1 /* MaterialFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CC82CA9A79000C701D1 /* MaterialFormViewModel.swift */; };
+		6B0C1CCE2CA9A8D500C701D1 /* MaterialFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CCD2CA9A8D500C701D1 /* MaterialFormViewController.xib */; };
+		6B0C1CCF2CA9A8D500C701D1 /* MaterialFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CCC2CA9A8D500C701D1 /* MaterialFormViewController.swift */; };
 		6BB222822CA6DFED00473864 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222812CA6DFED00473864 /* Image.swift */; };
 		6BB222842CA6EC4D00473864 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222832CA6EC4D00473864 /* BaseButton.swift */; };
 		6BB222862CA6EE3D00473864 /* PriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222852CA6EE3D00473864 /* PriceTextField.swift */; };
@@ -69,6 +75,12 @@
 		6B0C1CB52CA88C9500C701D1 /* BaseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextView.swift; sourceTree = "<group>"; };
 		6B0C1CB72CA8B80800C701D1 /* MuseoModerno-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Regular.ttf"; sourceTree = "<group>"; };
 		6B0C1CBA2CA8B94900C701D1 /* DesignFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignFormViewModel.swift; sourceTree = "<group>"; };
+		6B0C1CBD2CA99D5300C701D1 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		6B0C1CC12CA9A25100C701D1 /* MaterialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialsViewModel.swift; sourceTree = "<group>"; };
+		6B0C1CC52CA9A34B00C701D1 /* MaterialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialModel.swift; sourceTree = "<group>"; };
+		6B0C1CC82CA9A79000C701D1 /* MaterialFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialFormViewModel.swift; sourceTree = "<group>"; };
+		6B0C1CCC2CA9A8D500C701D1 /* MaterialFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialFormViewController.swift; sourceTree = "<group>"; };
+		6B0C1CCD2CA9A8D500C701D1 /* MaterialFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialFormViewController.xib; sourceTree = "<group>"; };
 		6BB222812CA6DFED00473864 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6BB222832CA6EC4D00473864 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		6BB222852CA6EE3D00473864 /* PriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextField.swift; sourceTree = "<group>"; };
@@ -159,6 +171,74 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B0C1CBC2CA99D3800C701D1 /* Naviagtion */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CBD2CA99D5300C701D1 /* NavigationViewController.swift */,
+			);
+			path = Naviagtion;
+			sourceTree = "<group>";
+		};
+		6B0C1CBF2CA99DCD00C701D1 /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CC32CA9A32400C701D1 /* Model */,
+				6B0C1CC02CA9A23D00C701D1 /* ViewModel */,
+				6B0C1CC42CA9A33500C701D1 /* View */,
+			);
+			path = Materials;
+			sourceTree = "<group>";
+		};
+		6B0C1CC02CA9A23D00C701D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CC12CA9A25100C701D1 /* MaterialsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B0C1CC32CA9A32400C701D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CC52CA9A34B00C701D1 /* MaterialModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B0C1CC42CA9A33500C701D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BB222A92CA780C300473864 /* CatalogViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B0C1CC72CA9A76E00C701D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CC82CA9A79000C701D1 /* MaterialFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B0C1CCA2CA9A8AE00C701D1 /* MaterialForm */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CCB2CA9A8BC00C701D1 /* View */,
+				6B0C1CC72CA9A76E00C701D1 /* ViewModel */,
+			);
+			path = MaterialForm;
+			sourceTree = "<group>";
+		};
+		6B0C1CCB2CA9A8BC00C701D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CCC2CA9A8D500C701D1 /* MaterialFormViewController.swift */,
+				6B0C1CCD2CA9A8D500C701D1 /* MaterialFormViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6BB2228B2CA6F9C200473864 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +285,6 @@
 			children = (
 				6BB222A32CA7743A00473864 /* TabBar.storyboard */,
 				6BB222A52CA774CF00473864 /* TabBarController.swift */,
-				6BB222A92CA780C300473864 /* CatalogViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -213,6 +292,8 @@
 		6BB222AB2CA8125B00473864 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				6B0C1CCA2CA9A8AE00C701D1 /* MaterialForm */,
+				6B0C1CBF2CA99DCD00C701D1 /* Materials */,
 				6B0C1CAF2CA88A4900C701D1 /* DesignForm */,
 				6BB222AC2CA8137B00473864 /* Design */,
 				6BB2229E2CA773D800473864 /* TabBar */,
@@ -290,6 +371,7 @@
 				6BCA1CD02CA6CED500283FDB /* Records */,
 				6BCA1CB32CA6B33300283FDB /* Info */,
 				6BCA1CB22CA6B32500283FDB /* Menu */,
+				6B0C1CBC2CA99D3800C701D1 /* Naviagtion */,
 				6BCA1C8F2CA5DF9800283FDB /* AppDelegate.swift */,
 				6BCA1C912CA5DF9800283FDB /* SceneDelegate.swift */,
 				6BB222912CA729E600473864 /* CoreData */,
@@ -470,6 +552,7 @@
 				6BB222972CA72DD700473864 /* RecordTableViewCell.xib in Resources */,
 				6BCA1CC52CA6B73400283FDB /* SFProText-MediumItalic.ttf in Resources */,
 				6BCA1CC12CA6B71500283FDB /* SFProText-Bold.ttf in Resources */,
+				6B0C1CCE2CA9A8D500C701D1 /* MaterialFormViewController.xib in Resources */,
 				6BB222B72CA8636A00473864 /* DesignCollectionViewCell.xib in Resources */,
 				6BCA1CC22CA6B71500283FDB /* SFProText-Regular.ttf in Resources */,
 			);
@@ -484,6 +567,7 @@
 			files = (
 				6BB2229A2CA7360F00473864 /* Date.swift in Sources */,
 				6BB222882CA6EE6400473864 /* EmailTextField.swift in Sources */,
+				6B0C1CC92CA9A79000C701D1 /* MaterialFormViewModel.swift in Sources */,
 				6BB2228D2CA6F9DC00473864 /* RecordModel.swift in Sources */,
 				6BCA1CB12CA606D200283FDB /* ViewController.swift in Sources */,
 				6BB222842CA6EC4D00473864 /* BaseButton.swift in Sources */,
@@ -491,15 +575,19 @@
 				6BCA1C902CA5DF9800283FDB /* AppDelegate.swift in Sources */,
 				6BCA1CAF2CA5E45900283FDB /* MenuViewController.swift in Sources */,
 				6B0C1CB62CA88C9500C701D1 /* BaseTextView.swift in Sources */,
+				6B0C1CCF2CA9A8D500C701D1 /* MaterialFormViewController.swift in Sources */,
 				6BCA1CDC2CA6D7A600283FDB /* RecordFormViewController.swift in Sources */,
 				6BB222B32CA861A100473864 /* DesignsViewModel.swift in Sources */,
 				6BCA1CB62CA6B37A00283FDB /* InfoViewController.swift in Sources */,
+				6B0C1CBE2CA99D5300C701D1 /* NavigationViewController.swift in Sources */,
 				6B0C1CBB2CA8B94900C701D1 /* DesignFormViewModel.swift in Sources */,
 				6BCA1CCB2CA6BCD300283FDB /* EdgeShadowLayer.swift in Sources */,
 				6BB222982CA72DD700473864 /* RecordTableViewCell.swift in Sources */,
 				6BB222822CA6DFED00473864 /* Image.swift in Sources */,
+				6B0C1CC22CA9A25100C701D1 /* MaterialsViewModel.swift in Sources */,
 				6B0C1CB42CA88A7700C701D1 /* DesignFormViewController.swift in Sources */,
 				6BB222B82CA8636A00473864 /* DesignCollectionViewCell.swift in Sources */,
+				6B0C1CC62CA9A34B00C701D1 /* MaterialModel.swift in Sources */,
 				6BCA1CD72CA6CFC800283FDB /* BaseTextField.swift in Sources */,
 				6BB222BA2CA865B800473864 /* PaddingLabel.swift in Sources */,
 				6BB222932CA729F500473864 /* CoreDataManager.swift in Sources */,

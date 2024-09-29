@@ -138,4 +138,49 @@ class CoreDataManager {
             }
         }
     }
+    
+    func fetchMaterials(completion: @escaping ([MaterialModel], Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Material> = Material.fetchRequest()
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                var materialModels: [MaterialModel] = []
+                for result in results {
+                    let materialModel = MaterialModel(id: result.id, photo: result.photo, title: result.title)
+                    materialModels.append(materialModel)
+                }
+                completion(materialModels, nil)
+            } catch {
+                completion([], error)
+            }
+        }
+    }
+    
+    func saveMaterial(materialModel: MaterialModel?, completion: @escaping (Error?) -> Void) {
+        let id = materialModel?.id ?? UUID()
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Material> = Material.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                let material: Material
+
+                if let existingMaterial = results.first {
+                    material = existingMaterial
+                } else {
+                    material = Material(context: backgroundContext)
+                    material.id = id
+                }
+                material.photo = materialModel?.photo
+                material.title = materialModel?.title
+                try backgroundContext.save()
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
+    }
 }

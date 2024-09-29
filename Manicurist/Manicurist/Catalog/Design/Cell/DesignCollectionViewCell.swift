@@ -33,5 +33,12 @@ class DesignCollectionViewCell: UICollectionViewCell {
         }
         descriptionLabel.text = designModel.title
     }
+    
+    func setupMaterial(materialModel: MaterialModel) {
+        if let data = materialModel.photo {
+            imageView.image = UIImage(data: data)
+        }
+        descriptionLabel.text = materialModel.title
+    }
 
 }

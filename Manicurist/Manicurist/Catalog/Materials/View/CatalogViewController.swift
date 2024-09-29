@@ -1,5 +1,5 @@
 //
-//  DesignViewController.swift
+//  CatalogViewController.swift
 //  Manicurist
 //
 //  Created by Karen Khachatryan on 28.09.24.
@@ -8,17 +8,17 @@
 import UIKit
 import Combine
 
-class DesignViewController: UIViewController {
-
-    @IBOutlet weak var designsCollectionView: UICollectionView!
-    private let viewModel = DesignsViewModel.shared
+class CatalogViewController: UIViewController {
+    
+    @IBOutlet weak var materialsCollectionView: UICollectionView!
+    private let viewModel = MaterialsViewModel.shared
     private var cancellables: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupCollectionView()
-        viewModel.fetchDesings()
+        viewModel.fetchMaterials()
         subscribe()
     }
     
@@ -35,51 +35,51 @@ class DesignViewController: UIViewController {
         layout.minimumInteritemSpacing = 20
         layout.minimumLineSpacing = 4
         layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
-        designsCollectionView.collectionViewLayout = layout
-        designsCollectionView.register(UINib(nibName: "DesignCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DesignCollectionViewCell")
-        designsCollectionView.register(UINib(nibName: "AddDesignCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddDesignCollectionViewCell")
-        designsCollectionView.delegate = self
-        designsCollectionView.dataSource = self
+        materialsCollectionView.collectionViewLayout = layout
+        materialsCollectionView.register(UINib(nibName: "DesignCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DesignCollectionViewCell")
+        materialsCollectionView.register(UINib(nibName: "AddDesignCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddDesignCollectionViewCell")
+        materialsCollectionView.delegate = self
+        materialsCollectionView.dataSource = self
     }
     
     func subscribe() {
-        viewModel.$designs
+        viewModel.$materials
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] desings in
+            .sink { [weak self] materials in
                 guard let self = self else { return }
-                self.designsCollectionView.reloadData()
+                self.materialsCollectionView.reloadData()
             }
             .store(in: &cancellables)
     }
 }
 
-extension DesignViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CatalogViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.designs.count
+        viewModel.materials.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == viewModel.designs.count - 1 {
+        if indexPath.item == viewModel.materials.count - 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddDesignCollectionViewCell", for: indexPath) as! AddDesignCollectionViewCell
             cell.delegate = self
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DesignCollectionViewCell", for: indexPath) as! DesignCollectionViewCell
-            cell.setupDate(designModel: viewModel.designs[indexPath.item])
+            cell.setupMaterial(materialModel: viewModel.materials[indexPath.item])
             return cell
         }
     }
     
 }
 
-extension DesignViewController: AddDesignCollectionViewCellDelegate {
+extension CatalogViewController: AddDesignCollectionViewCellDelegate {
     func addDesign() {
-        let designFormVC = DesignFormViewController(nibName: "DesignFormViewController", bundle: nil)
-        designFormVC.completion = { [weak self] in
+        let materialFormVC = MaterialFormViewController(nibName: "MaterialFormViewController", bundle: nil)
+        materialFormVC.completion = { [weak self] in
             if let self = self {
-                viewModel.fetchDesings()
+                viewModel.fetchMaterials()
             }
         }
-        self.navigationController?.pushViewController(designFormVC, animated: true)
+        self.navigationController?.pushViewController(materialFormVC, animated: true)
     }
 }
