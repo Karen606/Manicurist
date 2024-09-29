@@ -16,6 +16,7 @@
 		<string>ADLaMDisplay-Regular.ttf</string>
 		<string>MuseoModerno-Medium.ttf</string>
 		<string>MuseoModerno-Regular.ttf</string>
+		<string>MuseoModerno-Bold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

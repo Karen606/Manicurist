@@ -39,4 +39,8 @@ extension UIFont {
     static func modernoRegular(size: CFloat) -> UIFont? {
         return UIFont(name: .MuseoModernoRegular, size: CGFloat(size))
     }
+    
+    static func modernoBold(size: CFloat) -> UIFont? {
+        return UIFont(name: .MuseoModernoBold, size: CGFloat(size))
+    }
 }

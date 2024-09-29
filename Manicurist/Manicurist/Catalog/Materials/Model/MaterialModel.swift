@@ -11,4 +11,5 @@ struct MaterialModel {
     var id: UUID?
     var photo: Data?
     var title: String?
+    var count: Int32 = 1
 }

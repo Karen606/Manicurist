@@ -26,6 +26,7 @@ class MaterialFormViewController: UIViewController {
     
     func setupUI() {
         setNavigationCancelButton()
+        setNavigationMenuButton()
         saveButton.addShadow()
         saveButton.layer.cornerRadius = 20
         saveButton.layer.masksToBounds = false
@@ -43,6 +44,19 @@ class MaterialFormViewController: UIViewController {
             .sink { [weak self] MaterialModel in
                 guard let self = self else { return }
                 self.saveButton.isEnabled = (MaterialModel.photo != nil && !(MaterialModel.title?.isEmpty ?? true))
+            }
+            .store(in: &cancellables)
+        
+        viewModel.$isEditing
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isEditing in
+                guard let self = self else { return }
+                if isEditing {
+                    if let data = viewModel.materialModel.photo {
+                        self.photoButton.setImage(UIImage(data: data), for: .normal)
+                    }
+                    self.descriptionTextView.text = viewModel.materialModel.title
+                }
             }
             .store(in: &cancellables)
     }

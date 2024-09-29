@@ -62,5 +62,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedMaterials(_ sender: UIButton) {
+        let recordsVC = StocksOfMaterialsViewController(nibName: "StocksOfMaterialsViewController", bundle: nil)
+        self.navigationController?.pushViewController(recordsVC, animated: true)
     }
 }

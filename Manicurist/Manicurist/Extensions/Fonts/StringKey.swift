@@ -28,4 +28,5 @@ extension String {
     static let displayRegular = "ADLaMDisplay-Regular"
     static let MuseoModernoMedium = "MuseoModerno-Medium"
     static let MuseoModernoRegular = "MuseoModerno-Regular"
+    static let MuseoModernoBold = "MuseoModerno-Bold"
 }

@@ -10,6 +10,7 @@ import Foundation
 class MaterialFormViewModel {
     static let shared = MaterialFormViewModel()
     @Published var materialModel = MaterialModel()
+    @Published var isEditing = false
     private init() {}
     
     func save(completion: @escaping (Bool) -> Void) {
@@ -22,5 +23,6 @@ class MaterialFormViewModel {
     
     func clear() {
         materialModel = MaterialModel()
+        isEditing = false
     }
 }

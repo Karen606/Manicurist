@@ -6,6 +6,7 @@
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Material" representedClassName="Material" syncable="YES" codeGenerationType="class">
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="photo" optional="YES" attributeType="Binary"/>
         <attribute name="title" optional="YES" attributeType="String"/>

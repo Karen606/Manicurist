@@ -147,7 +147,7 @@ class CoreDataManager {
                 let results = try backgroundContext.fetch(fetchRequest)
                 var materialModels: [MaterialModel] = []
                 for result in results {
-                    let materialModel = MaterialModel(id: result.id, photo: result.photo, title: result.title)
+                    let materialModel = MaterialModel(id: result.id, photo: result.photo, title: result.title, count: result.count)
                     materialModels.append(materialModel)
                 }
                 completion(materialModels, nil)
@@ -176,8 +176,55 @@ class CoreDataManager {
                 }
                 material.photo = materialModel?.photo
                 material.title = materialModel?.title
+                material.count = materialModel?.count ?? 1
                 try backgroundContext.save()
                 completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
+    }
+    
+    func incrementMaterialCount(by id: UUID, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Material> = Material.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                if let material = results.first {
+                    material.count += 1
+                    try backgroundContext.save()
+                    completion(nil)
+                } else {
+                    completion(NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: "Material not found"]))
+                }
+            } catch {
+                completion(error)
+            }
+        }
+    }
+
+    func decrementMaterialCount(by id: UUID, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Material> = Material.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                if let material = results.first {
+                    if material.count > 0 {
+                        material.count -= 1
+                        try backgroundContext.save()
+                        completion(nil)
+                    } else {
+                        completion(NSError(domain: "", code: 400, userInfo: [NSLocalizedDescriptionKey: "Material count is already zero"]))
+                    }
+                } else {
+                    completion(NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: "Material not found"]))
+                }
             } catch {
                 completion(error)
             }
