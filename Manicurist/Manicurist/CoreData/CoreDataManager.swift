@@ -93,4 +93,49 @@ class CoreDataManager {
             }
         }
     }
+    
+    func fetchDesigns(completion: @escaping ([DesignModel], Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Design> = Design.fetchRequest()
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                var designModels: [DesignModel] = []
+                for result in results {
+                    let designModel = DesignModel(id: result.id, photo: result.photo, title: result.title)
+                    designModels.append(designModel)
+                }
+                completion(designModels, nil)
+            } catch {
+                completion([], error)
+            }
+        }
+    }
+    
+    func saveDesign(designModel: DesignModel?, completion: @escaping (Error?) -> Void) {
+        let id = designModel?.id ?? UUID()
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Design> = Design.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                let design: Design
+
+                if let existingMaterial = results.first {
+                    design = existingMaterial
+                } else {
+                    design = Design(context: backgroundContext)
+                    design.id = id
+                }
+                design.photo = designModel?.photo
+                design.title = designModel?.title
+                try backgroundContext.save()
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
+    }
 }

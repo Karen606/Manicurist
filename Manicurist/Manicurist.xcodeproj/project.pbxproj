@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0C1CB32CA88A7700C701D1 /* DesignFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CB22CA88A7700C701D1 /* DesignFormViewController.xib */; };
+		6B0C1CB42CA88A7700C701D1 /* DesignFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CB12CA88A7700C701D1 /* DesignFormViewController.swift */; };
+		6B0C1CB62CA88C9500C701D1 /* BaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CB52CA88C9500C701D1 /* BaseTextView.swift */; };
+		6B0C1CB82CA8B80800C701D1 /* MuseoModerno-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CB72CA8B80800C701D1 /* MuseoModerno-Regular.ttf */; };
+		6B0C1CBB2CA8B94900C701D1 /* DesignFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CBA2CA8B94900C701D1 /* DesignFormViewModel.swift */; };
 		6BB222822CA6DFED00473864 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222812CA6DFED00473864 /* Image.swift */; };
 		6BB222842CA6EC4D00473864 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222832CA6EC4D00473864 /* BaseButton.swift */; };
 		6BB222862CA6EE3D00473864 /* PriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222852CA6EE3D00473864 /* PriceTextField.swift */; };
@@ -19,6 +24,17 @@
 		6BB222982CA72DD700473864 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222952CA72DD700473864 /* RecordTableViewCell.swift */; };
 		6BB2229A2CA7360F00473864 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222992CA7360F00473864 /* Date.swift */; };
 		6BB2229D2CA736EB00473864 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2229C2CA736EB00473864 /* RecordsViewModel.swift */; };
+		6BB222A42CA7743A00473864 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB222A32CA7743A00473864 /* TabBar.storyboard */; };
+		6BB222A62CA774CF00473864 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222A52CA774CF00473864 /* TabBarController.swift */; };
+		6BB222A82CA779C300473864 /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222A72CA779C300473864 /* DesignViewController.swift */; };
+		6BB222AA2CA780C300473864 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222A92CA780C300473864 /* CatalogViewController.swift */; };
+		6BB222B02CA860BA00473864 /* DesignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222AF2CA860BA00473864 /* DesignModel.swift */; };
+		6BB222B32CA861A100473864 /* DesignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222B22CA861A100473864 /* DesignsViewModel.swift */; };
+		6BB222B72CA8636A00473864 /* DesignCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB222B62CA8636A00473864 /* DesignCollectionViewCell.xib */; };
+		6BB222B82CA8636A00473864 /* DesignCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222B52CA8636A00473864 /* DesignCollectionViewCell.swift */; };
+		6BB222BA2CA865B800473864 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222B92CA865B800473864 /* PaddingLabel.swift */; };
+		6BB222BD2CA8827800473864 /* AddDesignCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB222BC2CA8827800473864 /* AddDesignCollectionViewCell.xib */; };
+		6BB222BE2CA8827800473864 /* AddDesignCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222BB2CA8827800473864 /* AddDesignCollectionViewCell.swift */; };
 		6BCA1C902CA5DF9800283FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCA1C8F2CA5DF9800283FDB /* AppDelegate.swift */; };
 		6BCA1C922CA5DF9800283FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCA1C912CA5DF9800283FDB /* SceneDelegate.swift */; };
 		6BCA1C972CA5DF9800283FDB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6BCA1C962CA5DF9800283FDB /* Base */; };
@@ -48,6 +64,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B0C1CB12CA88A7700C701D1 /* DesignFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignFormViewController.swift; sourceTree = "<group>"; };
+		6B0C1CB22CA88A7700C701D1 /* DesignFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignFormViewController.xib; sourceTree = "<group>"; };
+		6B0C1CB52CA88C9500C701D1 /* BaseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextView.swift; sourceTree = "<group>"; };
+		6B0C1CB72CA8B80800C701D1 /* MuseoModerno-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-Regular.ttf"; sourceTree = "<group>"; };
+		6B0C1CBA2CA8B94900C701D1 /* DesignFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignFormViewModel.swift; sourceTree = "<group>"; };
 		6BB222812CA6DFED00473864 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6BB222832CA6EC4D00473864 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		6BB222852CA6EE3D00473864 /* PriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextField.swift; sourceTree = "<group>"; };
@@ -60,6 +81,17 @@
 		6BB222962CA72DD700473864 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
 		6BB222992CA7360F00473864 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		6BB2229C2CA736EB00473864 /* RecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModel.swift; sourceTree = "<group>"; };
+		6BB222A32CA7743A00473864 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		6BB222A52CA774CF00473864 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6BB222A72CA779C300473864 /* DesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
+		6BB222A92CA780C300473864 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		6BB222AF2CA860BA00473864 /* DesignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModel.swift; sourceTree = "<group>"; };
+		6BB222B22CA861A100473864 /* DesignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignsViewModel.swift; sourceTree = "<group>"; };
+		6BB222B52CA8636A00473864 /* DesignCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCollectionViewCell.swift; sourceTree = "<group>"; };
+		6BB222B62CA8636A00473864 /* DesignCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignCollectionViewCell.xib; sourceTree = "<group>"; };
+		6BB222B92CA865B800473864 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		6BB222BB2CA8827800473864 /* AddDesignCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDesignCollectionViewCell.swift; sourceTree = "<group>"; };
+		6BB222BC2CA8827800473864 /* AddDesignCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDesignCollectionViewCell.xib; sourceTree = "<group>"; };
 		6BCA1C8C2CA5DF9800283FDB /* Manicurist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manicurist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCA1C8F2CA5DF9800283FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BCA1C912CA5DF9800283FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +133,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B0C1CAF2CA88A4900C701D1 /* DesignForm */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CB92CA8B92600C701D1 /* ViewModel */,
+				6B0C1CB02CA88A5500C701D1 /* View */,
+			);
+			path = DesignForm;
+			sourceTree = "<group>";
+		};
+		6B0C1CB02CA88A5500C701D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CB12CA88A7700C701D1 /* DesignFormViewController.swift */,
+				6B0C1CB22CA88A7700C701D1 /* DesignFormViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B0C1CB92CA8B92600C701D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CBA2CA8B94900C701D1 /* DesignFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6BB2228B2CA6F9C200473864 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +200,72 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6BB2229E2CA773D800473864 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6BB222A32CA7743A00473864 /* TabBar.storyboard */,
+				6BB222A52CA774CF00473864 /* TabBarController.swift */,
+				6BB222A92CA780C300473864 /* CatalogViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		6BB222AB2CA8125B00473864 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CAF2CA88A4900C701D1 /* DesignForm */,
+				6BB222AC2CA8137B00473864 /* Design */,
+				6BB2229E2CA773D800473864 /* TabBar */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		6BB222AC2CA8137B00473864 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				6BB222B42CA862C700473864 /* Cell */,
+				6BB222B12CA8619300473864 /* ViewModel */,
+				6BB222AE2CA860AE00473864 /* Model */,
+				6BB222AD2CA860A700473864 /* View */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		6BB222AD2CA860A700473864 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BB222A72CA779C300473864 /* DesignViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BB222AE2CA860AE00473864 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BB222AF2CA860BA00473864 /* DesignModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BB222B12CA8619300473864 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BB222B22CA861A100473864 /* DesignsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6BB222B42CA862C700473864 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6BB222B52CA8636A00473864 /* DesignCollectionViewCell.swift */,
+				6BB222B62CA8636A00473864 /* DesignCollectionViewCell.xib */,
+				6BB222BB2CA8827800473864 /* AddDesignCollectionViewCell.swift */,
+				6BB222BC2CA8827800473864 /* AddDesignCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		6BCA1C832CA5DF9800283FDB = {
 			isa = PBXGroup;
 			children = (
@@ -161,13 +285,14 @@
 		6BCA1C8E2CA5DF9800283FDB /* Manicurist */ = {
 			isa = PBXGroup;
 			children = (
-				6BB222912CA729E600473864 /* CoreData */,
+				6BB222AB2CA8125B00473864 /* Catalog */,
 				6BCA1CD82CA6D77E00283FDB /* RecordForm */,
 				6BCA1CD02CA6CED500283FDB /* Records */,
 				6BCA1CB32CA6B33300283FDB /* Info */,
 				6BCA1CB22CA6B32500283FDB /* Menu */,
 				6BCA1C8F2CA5DF9800283FDB /* AppDelegate.swift */,
 				6BCA1C912CA5DF9800283FDB /* SceneDelegate.swift */,
+				6BB222912CA729E600473864 /* CoreData */,
 				6BCA1CAB2CA5E3D000283FDB /* Extensions */,
 				6BCA1C9B2CA5DF9A00283FDB /* Assets.xcassets */,
 				6BCA1C9D2CA5DF9A00283FDB /* LaunchScreen.storyboard */,
@@ -191,6 +316,8 @@
 				6BCA1CAC2CA5E3E000283FDB /* UIView.swift */,
 				6BCA1CB92CA6B5DB00283FDB /* Fonts */,
 				6BB222992CA7360F00473864 /* Date.swift */,
+				6BB222B92CA865B800473864 /* PaddingLabel.swift */,
+				6B0C1CB52CA88C9500C701D1 /* BaseTextView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +350,7 @@
 				6BCA1CBF2CA6B71500283FDB /* SFProText-Semibold.ttf */,
 				6BCA1CC42CA6B73300283FDB /* SFProText-MediumItalic.ttf */,
 				6BCA1CCE2CA6CD3700283FDB /* MuseoModerno-Medium.ttf */,
+				6B0C1CB72CA8B80800C701D1 /* MuseoModerno-Regular.ttf */,
 				6BCA1CC82CA6B79A00283FDB /* StringKey.swift */,
 				6BCA1CC62CA6B78700283FDB /* Font.swift */,
 			);
@@ -325,19 +453,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0C1CB32CA88A7700C701D1 /* DesignFormViewController.xib in Resources */,
 				6BCA1CBB2CA6B5FC00283FDB /* ADLaMDisplay-Regular.ttf in Resources */,
 				6BCA1CDD2CA6D7A600283FDB /* RecordFormViewController.xib in Resources */,
 				6BCA1C9C2CA5DF9A00283FDB /* Assets.xcassets in Resources */,
 				6BCA1CC32CA6B71500283FDB /* SFProText-Semibold.ttf in Resources */,
 				6BCA1CD52CA6CF3B00283FDB /* RecordsViewController.xib in Resources */,
+				6B0C1CB82CA8B80800C701D1 /* MuseoModerno-Regular.ttf in Resources */,
 				6BCA1C9F2CA5DF9A00283FDB /* Base in Resources */,
 				6BCA1CC02CA6B71500283FDB /* SFProText-Medium.ttf in Resources */,
 				6BCA1CB72CA6B37A00283FDB /* InfoViewController.xib in Resources */,
 				6BCA1CCF2CA6CD3700283FDB /* MuseoModerno-Medium.ttf in Resources */,
 				6BCA1C972CA5DF9800283FDB /* Base in Resources */,
+				6BB222BD2CA8827800473864 /* AddDesignCollectionViewCell.xib in Resources */,
+				6BB222A42CA7743A00473864 /* TabBar.storyboard in Resources */,
 				6BB222972CA72DD700473864 /* RecordTableViewCell.xib in Resources */,
 				6BCA1CC52CA6B73400283FDB /* SFProText-MediumItalic.ttf in Resources */,
 				6BCA1CC12CA6B71500283FDB /* SFProText-Bold.ttf in Resources */,
+				6BB222B72CA8636A00473864 /* DesignCollectionViewCell.xib in Resources */,
 				6BCA1CC22CA6B71500283FDB /* SFProText-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,22 +490,33 @@
 				6BCA1CD42CA6CF3B00283FDB /* RecordsViewController.swift in Sources */,
 				6BCA1C902CA5DF9800283FDB /* AppDelegate.swift in Sources */,
 				6BCA1CAF2CA5E45900283FDB /* MenuViewController.swift in Sources */,
+				6B0C1CB62CA88C9500C701D1 /* BaseTextView.swift in Sources */,
 				6BCA1CDC2CA6D7A600283FDB /* RecordFormViewController.swift in Sources */,
+				6BB222B32CA861A100473864 /* DesignsViewModel.swift in Sources */,
 				6BCA1CB62CA6B37A00283FDB /* InfoViewController.swift in Sources */,
+				6B0C1CBB2CA8B94900C701D1 /* DesignFormViewModel.swift in Sources */,
 				6BCA1CCB2CA6BCD300283FDB /* EdgeShadowLayer.swift in Sources */,
 				6BB222982CA72DD700473864 /* RecordTableViewCell.swift in Sources */,
 				6BB222822CA6DFED00473864 /* Image.swift in Sources */,
+				6B0C1CB42CA88A7700C701D1 /* DesignFormViewController.swift in Sources */,
+				6BB222B82CA8636A00473864 /* DesignCollectionViewCell.swift in Sources */,
 				6BCA1CD72CA6CFC800283FDB /* BaseTextField.swift in Sources */,
+				6BB222BA2CA865B800473864 /* PaddingLabel.swift in Sources */,
 				6BB222932CA729F500473864 /* CoreDataManager.swift in Sources */,
+				6BB222BE2CA8827800473864 /* AddDesignCollectionViewCell.swift in Sources */,
+				6BB222AA2CA780C300473864 /* CatalogViewController.swift in Sources */,
 				6BB2229D2CA736EB00473864 /* RecordsViewModel.swift in Sources */,
 				6BB2228A2CA6F15800473864 /* PhoneNumberTextField.swift in Sources */,
 				6BCA1CC72CA6B78700283FDB /* Font.swift in Sources */,
+				6BB222A62CA774CF00473864 /* TabBarController.swift in Sources */,
 				6BB222862CA6EE3D00473864 /* PriceTextField.swift in Sources */,
 				6BCA1C9A2CA5DF9800283FDB /* Manicurist.xcdatamodeld in Sources */,
 				6BCA1C922CA5DF9800283FDB /* SceneDelegate.swift in Sources */,
 				6BCA1CC92CA6B79A00283FDB /* StringKey.swift in Sources */,
 				6BCA1CAD2CA5E3E000283FDB /* UIView.swift in Sources */,
+				6BB222A82CA779C300473864 /* DesignViewController.swift in Sources */,
 				6BB222902CA6FD7400473864 /* RecordFormViewModel.swift in Sources */,
+				6BB222B02CA860BA00473864 /* DesignModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.ttf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DesignFormViewController" customModule="Manicurist" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTextView" destination="VL7-ce-yDa" id="xAN-pT-Pys"/>
+                <outlet property="photoButton" destination="Dma-uJ-Ggm" id="fmV-Ks-p7a"/>
+                <outlet property="saveButton" destination="FLg-b1-kdf" id="yEY-XR-3l4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkl-MB-akA">
+                    <rect key="frame" x="27" y="59" width="342" height="150"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dma-uJ-Ggm">
+                            <rect key="frame" x="0.0" y="0.0" width="342" height="138"/>
+                            <color key="backgroundColor" red="0.97254901960784312" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ImageDefault"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="choosePhoto:" destination="-1" eventType="touchUpInside" id="8og-r3-gav"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="lwB-Ge-N9c">
+                            <rect key="frame" x="158.66666666666666" y="125" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="INC-X1-p0R"/>
+                                <constraint firstAttribute="height" constant="25" id="gg3-7H-ncf"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="lwB-Ge-N9c" firstAttribute="centerX" secondItem="bkl-MB-akA" secondAttribute="centerX" id="HPA-pX-jUK"/>
+                        <constraint firstItem="Dma-uJ-Ggm" firstAttribute="leading" secondItem="bkl-MB-akA" secondAttribute="leading" id="Ieb-8g-Ign"/>
+                        <constraint firstAttribute="trailing" secondItem="Dma-uJ-Ggm" secondAttribute="trailing" id="QCp-N3-20z"/>
+                        <constraint firstAttribute="bottom" secondItem="Dma-uJ-Ggm" secondAttribute="bottom" constant="12" id="ZQB-b2-dVX"/>
+                        <constraint firstAttribute="bottom" secondItem="lwB-Ge-N9c" secondAttribute="bottom" id="qne-RF-c6s"/>
+                        <constraint firstAttribute="height" constant="150" id="wEh-Rd-Qzn"/>
+                        <constraint firstItem="Dma-uJ-Ggm" firstAttribute="top" secondItem="bkl-MB-akA" secondAttribute="top" id="wdd-aU-xvo"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-ce-yDa" customClass="BaseTextView" customModule="Manicurist" customModuleProvider="target">
+                    <rect key="frame" x="27" y="229" width="342" height="135"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="135" id="tgq-hI-fZr"/>
+                    </constraints>
+                    <color key="textColor" name="BaseText"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLg-b1-kdf" customClass="BaseButton" customModule="Manicurist" customModuleProvider="target">
+                    <rect key="frame" x="123.66666666666669" y="708" width="146" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="146" id="PYa-H9-uq5"/>
+                        <constraint firstAttribute="height" constant="44" id="RJf-z3-B4J"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" name="BaseText"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedSave:" destination="-1" eventType="touchUpInside" id="GpW-xc-OcS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="VL7-ce-yDa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="HEt-mx-aGf"/>
+                <constraint firstItem="bkl-MB-akA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cKX-eO-Lpu"/>
+                <constraint firstItem="VL7-ce-yDa" firstAttribute="top" secondItem="bkl-MB-akA" secondAttribute="bottom" constant="20" id="f79-Eh-UNn"/>
+                <constraint firstItem="bkl-MB-akA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="27" id="oto-OH-Am2"/>
+                <constraint firstItem="FLg-b1-kdf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pIg-KV-USX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FLg-b1-kdf" secondAttribute="bottom" constant="66" id="pJg-U4-4ME"/>
+                <constraint firstItem="FLg-b1-kdf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VL7-ce-yDa" secondAttribute="bottom" constant="24" id="qWF-ej-745"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VL7-ce-yDa" secondAttribute="trailing" constant="24" id="szk-hD-hiK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bkl-MB-akA" secondAttribute="trailing" constant="24" id="zzm-or-hVf"/>
+            </constraints>
+            <point key="canvasLocation" x="75.572519083969468" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Add" width="25" height="23.333333969116211"/>
+        <image name="ImageDefault" width="100" height="100"/>
+        <namedColor name="Background">
+            <color red="0.95300000905990601" green="0.78799998760223389" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BaseText">
+            <color red="0.22400000691413879" green="0.21199999749660492" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -27,4 +27,5 @@ extension String {
     static let italicMedium = "SFProText-MediumItalic"
     static let displayRegular = "ADLaMDisplay-Regular"
     static let MuseoModernoMedium = "MuseoModerno-Medium"
+    static let MuseoModernoRegular = "MuseoModerno-Regular"
 }

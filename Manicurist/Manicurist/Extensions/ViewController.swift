@@ -33,14 +33,28 @@ extension UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
     }
     
+    func setNavigationFinanceButton() {
+        let financeButton = UIButton(type: .custom)
+        financeButton.setImage(UIImage(named: "Finance"), for: .normal)
+        financeButton.addTarget(self, action: #selector(clickedFinance), for: .touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: financeButton)
+    }
+    
     @objc func clickedMenu() {
         if let menuVC = navigationController?.viewControllers.first(where: { $0 is MenuViewController }) {
             self.navigationController?.popToViewController(menuVC, animated: true)
+        } else if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+            let menuVC = UIStoryboard(name: "Menu", bundle: .main).instantiateViewController(identifier: "MenuViewController")
+            sceneDelegate.window?.rootViewController = menuVC
         }
     }
     
     @objc func clickedBackButton() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func clickedFinance() {
+        
     }
     
     @objc func handleTap() {

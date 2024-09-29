@@ -30,7 +30,6 @@ class MenuViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         let topShadow = EdgeShadowLayer(forView: bottomStackView, edge: .Top)
         bottomStackView.layer.addSublayer(topShadow)
-        
     }
     
     @objc func openInfo() {
@@ -54,6 +53,12 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedCatalog(_ sender: UIButton) {
+        let tabBar = UIStoryboard(name: "TabBar", bundle: .main).instantiateViewController(withIdentifier: "TabBarController")
+        
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                sceneDelegate.window?.rootViewController = tabBar
+//                UIView.transition(with: sceneDelegate.window!, duration: 0.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
+            }
     }
     
     @IBAction func clickedMaterials(_ sender: UIButton) {
