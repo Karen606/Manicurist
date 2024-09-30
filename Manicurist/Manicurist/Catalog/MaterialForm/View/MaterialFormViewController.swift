@@ -18,6 +18,10 @@ class MaterialFormViewController: UIViewController {
     private var cancellables: Set<AnyCancellable> = []
     var completion: (() -> ())?
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

@@ -54,8 +54,8 @@ extension UIViewController {
     }
     
     @objc func clickedFinance() {
-        let reportsVC = ReportsViewController(nibName: "ReportsViewController", bundle: nil)
-        self.navigationController?.pushViewController(reportsVC, animated: true)
+//        let reportsVC = ReportsViewController(nibName: "ReportsViewController", bundle: nil)
+//        self.navigationController?.pushViewController(reportsVC, animated: true)
     }
     
     @objc func handleTap() {

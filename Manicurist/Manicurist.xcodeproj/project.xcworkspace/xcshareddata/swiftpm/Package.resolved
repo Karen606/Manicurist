@@ -1,5 +1,5 @@
 {
-  "originHash" : "1ea67d798876905652c4ed66fb949f6f8356fc47e86aab9f258b7b10b8f4bc5b",
+  "originHash" : "60b24d85964c769a1b61c0f69ab1fbcd1776fd5d35b47514729b3682a6242d36",
   "pins" : [
     {
       "identity" : "flcharts",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "43e0e5ea6f26678a1e177c1bfc62aa6818781c30",
         "version" : "1.9.1"
-      }
-    },
-    {
-      "identity" : "swiftpiechart",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ilamanov/SwiftPieChart",
-      "state" : {
-        "revision" : "e6f67120c55e7402f67f3463994105ff6cfbcd10",
-        "version" : "1.0.61"
       }
     }
   ],

@@ -56,9 +56,8 @@ class MenuViewController: UIViewController {
         let tabBar = UIStoryboard(name: "TabBar", bundle: .main).instantiateViewController(withIdentifier: "TabBarController")
         
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
-                sceneDelegate.window?.rootViewController = tabBar
-//                UIView.transition(with: sceneDelegate.window!, duration: 0.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
-            }
+            sceneDelegate.window?.rootViewController = tabBar
+        }
     }
     
     @IBAction func clickedMaterials(_ sender: UIButton) {

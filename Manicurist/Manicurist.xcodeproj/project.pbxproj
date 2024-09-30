@@ -30,7 +30,6 @@
 		6B0C1CEB2CAA03D100C701D1 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CE82CAA03D100C701D1 /* ReportsViewController.swift */; };
 		6B0C1CEF2CAA041300C701D1 /* ReportsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CEE2CAA041300C701D1 /* ReportsCollectionViewCell.xib */; };
 		6B0C1CF02CAA041300C701D1 /* ReportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CED2CAA041300C701D1 /* ReportsCollectionViewCell.swift */; };
-		6B0C1CF32CAA0FF600C701D1 /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0C1CF22CAA0FF600C701D1 /* SwiftPieChart */; };
 		6B0C1CF62CAA194500C701D1 /* FLCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0C1CF52CAA194500C701D1 /* FLCharts */; };
 		6B0C1CF92CAA233E00C701D1 /* ReportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CF82CAA233E00C701D1 /* ReportsViewModel.swift */; };
 		6BB222822CA6DFED00473864 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222812CA6DFED00473864 /* Image.swift */; };
@@ -167,7 +166,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B0C1CF32CAA0FF600C701D1 /* SwiftPieChart in Frameworks */,
 				6B0C1CF62CAA194500C701D1 /* FLCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,7 +607,6 @@
 			);
 			name = Manicurist;
 			packageProductDependencies = (
-				6B0C1CF22CAA0FF600C701D1 /* SwiftPieChart */,
 				6B0C1CF52CAA194500C701D1 /* FLCharts */,
 			);
 			productName = Manicurist;
@@ -641,7 +638,6 @@
 			);
 			mainGroup = 6BCA1C832CA5DF9800283FDB;
 			packageReferences = (
-				6B0C1CF12CAA0FF600C701D1 /* XCRemoteSwiftPackageReference "SwiftPieChart" */,
 				6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */,
 			);
 			productRefGroup = 6BCA1C8D2CA5DF9800283FDB /* Products */;
@@ -965,14 +961,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6B0C1CF12CAA0FF600C701D1 /* XCRemoteSwiftPackageReference "SwiftPieChart" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ilamanov/SwiftPieChart";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.61;
-			};
-		};
 		6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/francescoleoni98/FLCharts";
@@ -984,11 +972,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6B0C1CF22CAA0FF600C701D1 /* SwiftPieChart */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6B0C1CF12CAA0FF600C701D1 /* XCRemoteSwiftPackageReference "SwiftPieChart" */;
-			productName = SwiftPieChart;
-		};
 		6B0C1CF52CAA194500C701D1 /* FLCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */;
