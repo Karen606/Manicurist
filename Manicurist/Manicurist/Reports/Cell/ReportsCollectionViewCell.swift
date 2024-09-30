@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftPieChart
 import FLCharts
 
 class ReportsCollectionViewCell: UICollectionViewCell {
