@@ -32,7 +32,6 @@ class CustomTabBar: UITabBar {
         super.layoutSubviews()
         self.backgroundColor = .clear
         self.layer.masksToBounds = true
-        let itemCount = CGFloat(self.items?.count ?? 1)
         
         if let item = self.items?.first {
             if let view = item.value(forKey: "view") as? UIView {

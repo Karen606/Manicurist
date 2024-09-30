@@ -15,6 +15,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationFinanceButton()
         infoButton.setImage(UIImage(named: "Info"), for: .normal)
         infoButton.addTarget(self, action: #selector(openInfo), for: .touchUpInside)
         self.setNavigationBar(rightButton: infoButton)
