@@ -26,6 +26,13 @@
 		6B0C1CE02CA9C3E600C701D1 /* StocksOfMaterialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CDF2CA9C3E600C701D1 /* StocksOfMaterialsViewModel.swift */; };
 		6B0C1CE42CA9E6DB00C701D1 /* OutOfMaterialsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CE32CA9E6DB00C701D1 /* OutOfMaterialsViewController.xib */; };
 		6B0C1CE52CA9E6DB00C701D1 /* OutOfMaterialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CE22CA9E6DB00C701D1 /* OutOfMaterialsViewController.swift */; };
+		6B0C1CEA2CAA03D100C701D1 /* ReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CE92CAA03D100C701D1 /* ReportsViewController.xib */; };
+		6B0C1CEB2CAA03D100C701D1 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CE82CAA03D100C701D1 /* ReportsViewController.swift */; };
+		6B0C1CEF2CAA041300C701D1 /* ReportsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CEE2CAA041300C701D1 /* ReportsCollectionViewCell.xib */; };
+		6B0C1CF02CAA041300C701D1 /* ReportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CED2CAA041300C701D1 /* ReportsCollectionViewCell.swift */; };
+		6B0C1CF32CAA0FF600C701D1 /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0C1CF22CAA0FF600C701D1 /* SwiftPieChart */; };
+		6B0C1CF62CAA194500C701D1 /* FLCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0C1CF52CAA194500C701D1 /* FLCharts */; };
+		6B0C1CF92CAA233E00C701D1 /* ReportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CF82CAA233E00C701D1 /* ReportsViewModel.swift */; };
 		6BB222822CA6DFED00473864 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222812CA6DFED00473864 /* Image.swift */; };
 		6BB222842CA6EC4D00473864 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222832CA6EC4D00473864 /* BaseButton.swift */; };
 		6BB222862CA6EE3D00473864 /* PriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222852CA6EE3D00473864 /* PriceTextField.swift */; };
@@ -97,6 +104,11 @@
 		6B0C1CDF2CA9C3E600C701D1 /* StocksOfMaterialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksOfMaterialsViewModel.swift; sourceTree = "<group>"; };
 		6B0C1CE22CA9E6DB00C701D1 /* OutOfMaterialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutOfMaterialsViewController.swift; sourceTree = "<group>"; };
 		6B0C1CE32CA9E6DB00C701D1 /* OutOfMaterialsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutOfMaterialsViewController.xib; sourceTree = "<group>"; };
+		6B0C1CE82CAA03D100C701D1 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		6B0C1CE92CAA03D100C701D1 /* ReportsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsViewController.xib; sourceTree = "<group>"; };
+		6B0C1CED2CAA041300C701D1 /* ReportsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B0C1CEE2CAA041300C701D1 /* ReportsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsCollectionViewCell.xib; sourceTree = "<group>"; };
+		6B0C1CF82CAA233E00C701D1 /* ReportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewModel.swift; sourceTree = "<group>"; };
 		6BB222812CA6DFED00473864 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6BB222832CA6EC4D00473864 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		6BB222852CA6EE3D00473864 /* PriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextField.swift; sourceTree = "<group>"; };
@@ -155,6 +167,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0C1CF32CAA0FF600C701D1 /* SwiftPieChart in Frameworks */,
+				6B0C1CF62CAA194500C701D1 /* FLCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +315,42 @@
 			path = OutOfMaterials;
 			sourceTree = "<group>";
 		};
+		6B0C1CE62CAA03B700C701D1 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CF72CAA21FC00C701D1 /* ViewModel */,
+				6B0C1CEC2CAA03FB00C701D1 /* Cell */,
+				6B0C1CE72CAA03C100C701D1 /* View */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		6B0C1CE72CAA03C100C701D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CE82CAA03D100C701D1 /* ReportsViewController.swift */,
+				6B0C1CE92CAA03D100C701D1 /* ReportsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B0C1CEC2CAA03FB00C701D1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CED2CAA041300C701D1 /* ReportsCollectionViewCell.swift */,
+				6B0C1CEE2CAA041300C701D1 /* ReportsCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6B0C1CF72CAA21FC00C701D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B0C1CF82CAA233E00C701D1 /* ReportsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6BB2228B2CA6F9C200473864 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +478,7 @@
 		6BCA1C8E2CA5DF9800283FDB /* Manicurist */ = {
 			isa = PBXGroup;
 			children = (
+				6B0C1CE62CAA03B700C701D1 /* Reports */,
 				6B0C1CD02CA9ADD500C701D1 /* StocksOfMaterials */,
 				6BB222AB2CA8125B00473864 /* Catalog */,
 				6BCA1CD82CA6D77E00283FDB /* RecordForm */,
@@ -557,6 +608,10 @@
 			dependencies = (
 			);
 			name = Manicurist;
+			packageProductDependencies = (
+				6B0C1CF22CAA0FF600C701D1 /* SwiftPieChart */,
+				6B0C1CF52CAA194500C701D1 /* FLCharts */,
+			);
 			productName = Manicurist;
 			productReference = 6BCA1C8C2CA5DF9800283FDB /* Manicurist.app */;
 			productType = "com.apple.product-type.application";
@@ -585,6 +640,10 @@
 				Base,
 			);
 			mainGroup = 6BCA1C832CA5DF9800283FDB;
+			packageReferences = (
+				6B0C1CF12CAA0FF600C701D1 /* XCRemoteSwiftPackageReference "SwiftPieChart" */,
+				6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */,
+			);
 			productRefGroup = 6BCA1C8D2CA5DF9800283FDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -603,6 +662,7 @@
 				6BCA1CBB2CA6B5FC00283FDB /* ADLaMDisplay-Regular.ttf in Resources */,
 				6BCA1CDD2CA6D7A600283FDB /* RecordFormViewController.xib in Resources */,
 				6BCA1C9C2CA5DF9A00283FDB /* Assets.xcassets in Resources */,
+				6B0C1CEF2CAA041300C701D1 /* ReportsCollectionViewCell.xib in Resources */,
 				6BCA1CC32CA6B71500283FDB /* SFProText-Semibold.ttf in Resources */,
 				6BCA1CD52CA6CF3B00283FDB /* RecordsViewController.xib in Resources */,
 				6B0C1CE42CA9E6DB00C701D1 /* OutOfMaterialsViewController.xib in Resources */,
@@ -616,6 +676,7 @@
 				6B0C1CDA2CA9BE1900C701D1 /* StocksOfMaterialsViewController.xib in Resources */,
 				6BB222BD2CA8827800473864 /* AddDesignCollectionViewCell.xib in Resources */,
 				6BB222A42CA7743A00473864 /* TabBar.storyboard in Resources */,
+				6B0C1CEA2CAA03D100C701D1 /* ReportsViewController.xib in Resources */,
 				6BB222972CA72DD700473864 /* RecordTableViewCell.xib in Resources */,
 				6BCA1CC52CA6B73400283FDB /* SFProText-MediumItalic.ttf in Resources */,
 				6BCA1CC12CA6B71500283FDB /* SFProText-Bold.ttf in Resources */,
@@ -645,6 +706,7 @@
 				6BCA1CAF2CA5E45900283FDB /* MenuViewController.swift in Sources */,
 				6B0C1CB62CA88C9500C701D1 /* BaseTextView.swift in Sources */,
 				6B0C1CCF2CA9A8D500C701D1 /* MaterialFormViewController.swift in Sources */,
+				6B0C1CF92CAA233E00C701D1 /* ReportsViewModel.swift in Sources */,
 				6B0C1CD72CA9AF4000C701D1 /* StocksOfMaterialsTableViewCell.swift in Sources */,
 				6BCA1CDC2CA6D7A600283FDB /* RecordFormViewController.swift in Sources */,
 				6BB222B32CA861A100473864 /* DesignsViewModel.swift in Sources */,
@@ -655,11 +717,13 @@
 				6BB222982CA72DD700473864 /* RecordTableViewCell.swift in Sources */,
 				6BB222822CA6DFED00473864 /* Image.swift in Sources */,
 				6B0C1CC22CA9A25100C701D1 /* MaterialsViewModel.swift in Sources */,
+				6B0C1CEB2CAA03D100C701D1 /* ReportsViewController.swift in Sources */,
 				6B0C1CB42CA88A7700C701D1 /* DesignFormViewController.swift in Sources */,
 				6B0C1CE52CA9E6DB00C701D1 /* OutOfMaterialsViewController.swift in Sources */,
 				6BB222B82CA8636A00473864 /* DesignCollectionViewCell.swift in Sources */,
 				6B0C1CC62CA9A34B00C701D1 /* MaterialModel.swift in Sources */,
 				6BCA1CD72CA6CFC800283FDB /* BaseTextField.swift in Sources */,
+				6B0C1CF02CAA041300C701D1 /* ReportsCollectionViewCell.swift in Sources */,
 				6BB222BA2CA865B800473864 /* PaddingLabel.swift in Sources */,
 				6BB222932CA729F500473864 /* CoreDataManager.swift in Sources */,
 				6BB222BE2CA8827800473864 /* AddDesignCollectionViewCell.swift in Sources */,
@@ -899,6 +963,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B0C1CF12CAA0FF600C701D1 /* XCRemoteSwiftPackageReference "SwiftPieChart" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ilamanov/SwiftPieChart";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.61;
+			};
+		};
+		6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/francescoleoni98/FLCharts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B0C1CF22CAA0FF600C701D1 /* SwiftPieChart */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0C1CF12CAA0FF600C701D1 /* XCRemoteSwiftPackageReference "SwiftPieChart" */;
+			productName = SwiftPieChart;
+		};
+		6B0C1CF52CAA194500C701D1 /* FLCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */;
+			productName = FLCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6BCA1C982CA5DF9800283FDB /* Manicurist.xcdatamodeld */ = {
