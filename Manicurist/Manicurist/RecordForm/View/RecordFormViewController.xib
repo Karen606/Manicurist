@@ -16,6 +16,7 @@
                 <outlet property="emailTextField" destination="XJo-5H-QXc" id="CEn-CC-ovM"/>
                 <outlet property="nameTextField" destination="mNZ-AL-leG" id="etE-Kc-hZs"/>
                 <outlet property="phoneNumberTextField" destination="e9F-DW-coj" id="swC-1R-tZd"/>
+                <outlet property="priceTextField" destination="Vcv-sG-giV" id="mAX-FU-bOE"/>
                 <outlet property="saveButton" destination="JSw-WW-j5p" id="9Fk-vt-inh"/>
                 <outlet property="scrollView" destination="xbS-2D-mb3" id="dZ3-vG-6g4"/>
                 <outlet property="timeArropUp" destination="AGE-OI-KW8" id="mba-7U-d8p"/>
@@ -39,6 +40,8 @@
                 <outletCollection property="fieldRightConsts" destination="O4p-Ue-dls" collectionClass="NSMutableArray" id="x9X-6E-vO1"/>
                 <outletCollection property="fieldRightConsts" destination="NBV-QJ-YCJ" collectionClass="NSMutableArray" id="57k-1Z-isZ"/>
                 <outletCollection property="fieldRightConsts" destination="p71-Ig-QjV" collectionClass="NSMutableArray" id="Bfa-6R-Hjm"/>
+                <outletCollection property="textFields" destination="Vcv-sG-giV" collectionClass="NSMutableArray" id="4un-gs-uuy"/>
+                <outletCollection property="editIcons" destination="mWt-wu-LWo" collectionClass="NSMutableArray" id="Qr5-zT-h0n"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -50,10 +53,10 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbH-ZC-LvS">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="533"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="581"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rvC-rw-XUg">
-                                    <rect key="frame" x="27" y="8" width="342" height="400"/>
+                                    <rect key="frame" x="27" y="8" width="342" height="470"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gl-KJ-Ng0">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="50"/>
@@ -280,10 +283,38 @@
                                                 <constraint firstAttribute="height" constant="50" id="5nz-Y7-Z7K"/>
                                             </constraints>
                                         </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIa-hl-5aP">
+                                            <rect key="frame" x="0.0" y="420" width="342" height="50"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcv-sG-giV" customClass="PriceTextField" customModule="Manicurist" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="iUM-LR-wZG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Edit" translatesAutoresizingMaskIntoConstraints="NO" id="mWt-wu-LWo">
+                                                    <rect key="frame" x="303" y="13" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="JWf-hc-JJJ"/>
+                                                        <constraint firstAttribute="height" constant="24" id="QZh-s7-Tfx"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vcv-sG-giV" firstAttribute="leading" secondItem="SIa-hl-5aP" secondAttribute="leading" id="8B7-10-NDl"/>
+                                                <constraint firstItem="mWt-wu-LWo" firstAttribute="centerY" secondItem="Vcv-sG-giV" secondAttribute="centerY" id="JaB-qe-pKn"/>
+                                                <constraint firstItem="Vcv-sG-giV" firstAttribute="top" secondItem="SIa-hl-5aP" secondAttribute="top" id="UAw-M5-QSW"/>
+                                                <constraint firstAttribute="height" constant="50" id="V58-aE-Kmm"/>
+                                                <constraint firstAttribute="trailing" secondItem="mWt-wu-LWo" secondAttribute="trailing" constant="15" id="m97-hZ-TAq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vcv-sG-giV" secondAttribute="trailing" id="zPj-ij-cy1"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-WW-j5p" customClass="BaseButton" customModule="Manicurist" customModuleProvider="target">
-                                    <rect key="frame" x="123.66666666666669" y="465" width="146" height="44"/>
+                                    <rect key="frame" x="123.66666666666669" y="513" width="146" height="44"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="146" id="rsP-ZB-IbJ"/>
@@ -305,9 +336,9 @@
                                 <constraint firstItem="JSw-WW-j5p" firstAttribute="centerX" secondItem="XbH-ZC-LvS" secondAttribute="centerX" id="Re9-0K-c9L"/>
                                 <constraint firstItem="rvC-rw-XUg" firstAttribute="top" secondItem="XbH-ZC-LvS" secondAttribute="top" constant="8" id="XMB-TZ-Fzj"/>
                                 <constraint firstAttribute="bottom" secondItem="JSw-WW-j5p" secondAttribute="bottom" constant="24" id="myj-kz-WO5"/>
-                                <constraint firstItem="JSw-WW-j5p" firstAttribute="top" secondItem="7v5-tT-mr7" secondAttribute="bottom" constant="57" id="tBX-uo-J0R"/>
                                 <constraint firstItem="rvC-rw-XUg" firstAttribute="leading" secondItem="XbH-ZC-LvS" secondAttribute="leading" constant="27" id="wE9-aK-Hon"/>
                                 <constraint firstAttribute="trailing" secondItem="rvC-rw-XUg" secondAttribute="trailing" constant="24" id="z6g-We-YEd"/>
+                                <constraint firstItem="JSw-WW-j5p" firstAttribute="top" secondItem="rvC-rw-XUg" secondAttribute="bottom" constant="35" id="zao-Ms-aYc"/>
                             </constraints>
                             <connections>
                                 <outletCollection property="gestureRecognizers" destination="lYl-gj-fT0" appends="YES" id="ihk-JL-GT4"/>

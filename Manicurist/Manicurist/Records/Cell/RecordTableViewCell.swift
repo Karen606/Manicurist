@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RecordTableViewCellDelegate: AnyObject {
-    func removeRecord(id: UUID)
+    func updateStatus(id: UUID, status: Status)
 }
 
 class RecordTableViewCell: UITableViewCell {
@@ -19,6 +19,8 @@ class RecordTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var completedButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     private var id: UUID?
     weak var delegate: RecordTableViewCellDelegate?
     
@@ -41,6 +43,24 @@ class RecordTableViewCell: UITableViewCell {
     }
     
     func setupContent(record: RecordModel) {
+        switch record.status {
+        case .active:
+            completedButton.isHidden = false
+            completedButton.isUserInteractionEnabled = true
+            cancelButton.isHidden = false
+            cancelButton.isUserInteractionEnabled = true
+            self.bgView.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.9647058824, blue: 0.9647058824, alpha: 1)
+        case .canceled:
+            completedButton.isHidden = true
+            cancelButton.isHidden = false
+            cancelButton.isUserInteractionEnabled = false
+            self.bgView.backgroundColor = .statusCanceled
+        case .completed:
+            cancelButton.isHidden = true
+            completedButton.isHidden = false
+            completedButton.isUserInteractionEnabled = false
+            self.bgView.backgroundColor = .statusCompleted
+        }
         nameLabel.text = record.name
         typeLabel.text = record.type
         dateLabel.text = record.date?.dateFormat()
@@ -51,8 +71,13 @@ class RecordTableViewCell: UITableViewCell {
     
     @IBAction func clickedRemove(_ sender: UIButton) {
         if let id = id {
-            delegate?.removeRecord(id: id)
+            delegate?.updateStatus(id: id, status: .canceled)
         }
     }
     
+    @IBAction func clickedComplete(_ sender: UIButton) {
+        if let id = id {
+            delegate?.updateStatus(id: id, status: .completed)
+        }
+    }
 }

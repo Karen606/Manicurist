@@ -124,8 +124,8 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension RecordsViewController: RecordTableViewCellDelegate {
-    func removeRecord(id: UUID) {
-        viewModel.removeRecord(id: id)
+    func updateStatus(id: UUID, status: Status) {
+        viewModel.updateStatus(id: id, status: status)
     }
 }
 

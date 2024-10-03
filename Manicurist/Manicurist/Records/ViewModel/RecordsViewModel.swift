@@ -32,10 +32,10 @@ class RecordsViewModel {
         }
     }
     
-    func removeRecord(id: UUID) {
-        CoreDataManager.shared.removeRecord(id: id) { [weak self] error in
+    func updateStatus(id: UUID, status: Status) {
+        CoreDataManager.shared.updateRecordStatus(id: id, newStatus: status.id, completion: { [weak self] error in
             guard let self = self else { return }
             self.fetchRecords()
-        }
+        })
     }
 }

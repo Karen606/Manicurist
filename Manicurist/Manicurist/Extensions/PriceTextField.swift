@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol PriceTextFielddDelegate: AnyObject {
+    func textFieldDidChangeSelection(_ textField: UITextField)
+    func textFieldDidBeginEditing(_ textField: UITextField)
+    func textFieldDidEndEditing(_ textField: UITextField)
+}
+
 class PriceTextField: BaseTextField, UITextFieldDelegate {
+    var priceDelegate: PriceTextFielddDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,9 +34,17 @@ class PriceTextField: BaseTextField, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return false }
         
+        // Define allowed characters (digits, comma, and dot)
         let allowedCharacters = CharacterSet(charactersIn: "0123456789.,")
         let characterSet = CharacterSet(charactersIn: string)
+        
+        // Check if the entered character is allowed
         if !allowedCharacters.isSuperset(of: characterSet) {
+            return false
+        }
+
+        // Avoid multiple decimal points
+        if (text.contains(".") || text.contains(",")) && (string == "." || string == ",") {
             return false
         }
         
@@ -38,21 +53,22 @@ class PriceTextField: BaseTextField, UITextFieldDelegate {
         textField.text = formatPrice(input: newString)
         return false
     }
-    
+
     private func formatPrice(input: String) -> String {
         let cleanedInput = input.replacingOccurrences(of: "[^0-9.,]", with: "", options: .regularExpression)
         let normalizedInput = cleanedInput.replacingOccurrences(of: ",", with: ".")
+        
         if normalizedInput.last == "." {
             return normalizedInput
         }
-        let parts = normalizedInput.components(separatedBy: ".")
         
+        let parts = normalizedInput.components(separatedBy: ".")
         var integerPart = parts.first ?? ""
         let decimalPart = parts.count > 1 ? parts.last! : ""
         
         if integerPart.count > 9 {
-                integerPart = String(integerPart.prefix(9))
-            }
+            integerPart = String(integerPart.prefix(9))
+        }
         
         if let number = Double(integerPart) {
             let formatter = NumberFormatter()
@@ -60,16 +76,32 @@ class PriceTextField: BaseTextField, UITextFieldDelegate {
             formatter.maximumFractionDigits = 0
             integerPart = formatter.string(from: NSNumber(value: number)) ?? integerPart
         }
+        
         let formattedPrice = decimalPart.isEmpty ? integerPart : "\(integerPart).\(decimalPart.prefix(2))"
         
         return formattedPrice
+    }
+
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        priceDelegate?.textFieldDidChangeSelection(textField)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        priceDelegate?.textFieldDidEndEditing(textField)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        priceDelegate?.textFieldDidBeginEditing(textField)
     }
     
     func isValidPrice() -> Bool {
         guard let text = self.text else { return false }
         
-        let cleanedText = text.replacingOccurrences(of: "$", with: "")
-        
+        var cleanedText = text.replacingOccurrences(of: "$", with: "")
+        cleanedText = cleanedText.replacingOccurrences(of: ".", with: ",")
+        cleanedText = cleanedText.replacingOccurrences(of: " ", with: "")
+
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = 2
@@ -83,5 +115,31 @@ class PriceTextField: BaseTextField, UITextFieldDelegate {
             return true
         }
         return false
+    }
+    
+    func formatNumber() -> Double? {
+        guard let text = self.text else { return nil }
+        
+        var cleanedText = text.replacingOccurrences(of: "$", with: "")
+        cleanedText = cleanedText.replacingOccurrences(of: ".", with: ",")
+        cleanedText = cleanedText.replacingOccurrences(of: " ", with: "")
+
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 2
+        numberFormatter.minimumFractionDigits = 0
+        
+        if let price = numberFormatter.number(from: cleanedText) {
+            let components = cleanedText.components(separatedBy: ".")
+            if components.count == 2 && components[1].count > 2 {
+                return nil
+            }
+            if Double(Int(truncating: price)) == Double(truncating: price) {
+                return (Double(truncating: price))
+            } else {
+                return Double(truncating: price)
+            }
+        }
+        return nil
     }
 }

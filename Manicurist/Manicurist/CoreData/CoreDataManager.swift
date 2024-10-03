@@ -30,7 +30,7 @@ class CoreDataManager {
                 let results = try backgroundContext.fetch(fetchRequest)
                 var recordModels: [RecordModel] = []
                 for result in results {
-                    let recordlModel = RecordModel(id: result.id, name: result.name, email: result.email, phoneNumber: result.phone, type: result.typeOfManicure, design: result.designAndColor, date: result.date, time: result.time)         
+                    let recordlModel = RecordModel(status: .status(value: result.status ?? ""), id: result.id, name: result.name, email: result.email, phoneNumber: result.phone, type: result.typeOfManicure, design: result.designAndColor, date: result.date, time: result.time, price: result.price)         
                     recordModels.append(recordlModel)
                 }
                 completion(recordModels, nil)
@@ -57,6 +57,7 @@ class CoreDataManager {
                     record = Record(context: backgroundContext)
                     record.id = id
                 }
+                record.status = recordModel?.status.id
                 record.name = recordModel?.name
                 record.email = recordModel?.email
                 record.phone = recordModel?.phoneNumber
@@ -64,6 +65,7 @@ class CoreDataManager {
                 record.designAndColor = recordModel?.design
                 record.date = recordModel?.date
                 record.time = recordModel?.time
+                record.price = recordModel?.price ?? 0
                 try backgroundContext.save()
                 completion(nil)
             } catch {
@@ -72,7 +74,7 @@ class CoreDataManager {
         }
     }
     
-    func removeRecord(id: UUID, completion: @escaping (Error?) -> Void) {
+    func updateRecordStatus(id: UUID, newStatus: String, completion: @escaping (Error?) -> Void) {
         let backgroundContext = persistentContainer.newBackgroundContext()
         backgroundContext.perform {
             let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
@@ -80,9 +82,9 @@ class CoreDataManager {
 
             do {
                 let results = try backgroundContext.fetch(fetchRequest)
-                if let recordToDelete = results.first {
-                    backgroundContext.delete(recordToDelete)
-                    try backgroundContext.save()
+                if let recordToUpdate = results.first {
+                    recordToUpdate.status = newStatus // Update the status here
+                    try backgroundContext.save() // Save the context with the updated status
                     completion(nil)
                 } else {
                     let error = NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: "Record not found"])

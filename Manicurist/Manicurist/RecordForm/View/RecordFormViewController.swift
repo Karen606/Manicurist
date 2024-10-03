@@ -17,8 +17,7 @@ class RecordFormViewController: UIViewController {
     
     @IBOutlet var fieldRightConsts: [NSLayoutConstraint]!
     
-    //    @IBOutlet var fieldsRightConsts: [NSLayoutConstraint]!
-//    @IBOutlet var editConsts: [NSLayoutConstraint]!
+    @IBOutlet weak var priceTextField: PriceTextField!
     @IBOutlet weak var nameTextField: BaseTextField!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var phoneNumberTextField: PhoneNumberTextField!
@@ -99,7 +98,8 @@ class RecordFormViewController: UIViewController {
                     self.designTextField.text = viewModel.record.design
                     self.dateTextField.text = viewModel.record.date?.dateFormat()
                     self.timeTextField.text = viewModel.record.time?.timeFormat()
-                    self.saveButton.isEnabled = (self.textFields.validate() && (phoneNumberTextField.text?.isValidPhoneNumber() ?? false) && (emailTextField.text?.isValidEmail() ?? false))
+                    self.priceTextField.text = "\(viewModel.record.price ?? 0)$"
+                    self.saveButton.isEnabled = (self.textFields.validate() && (phoneNumberTextField.text?.isValidPhoneNumber() ?? false) && (emailTextField.text?.isValidEmail() ?? false)) && priceTextField.isValidPrice()
                 }
             }
             .store(in: &cancellables)
@@ -144,7 +144,7 @@ class RecordFormViewController: UIViewController {
     }
 }
 
-extension RecordFormViewController: UITextFieldDelegate, PhoneNumberTextFieldDelegate {
+extension RecordFormViewController: UITextFieldDelegate, PhoneNumberTextFieldDelegate, PriceTextFielddDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         switch textField {
@@ -158,6 +158,8 @@ extension RecordFormViewController: UITextFieldDelegate, PhoneNumberTextFieldDel
             viewModel.record.type = textField.text
         case designTextField:
             viewModel.record.design = textField.text
+        case priceTextField:
+            viewModel.record.price = priceTextField.formatNumber()
         default:
             break
         }
@@ -174,6 +176,8 @@ extension RecordFormViewController: UITextFieldDelegate, PhoneNumberTextFieldDel
         case timeTextField:
             timeArropUp.isHighlighted = false
             timeArrowDown.isHighlighted = false
+        case priceTextField:
+            priceTextField.text! += "$"
         default:
             break
         }
@@ -186,6 +190,10 @@ extension RecordFormViewController: UITextFieldDelegate, PhoneNumberTextFieldDel
         case timeTextField:
             timeArropUp.isHighlighted = true
             timeArrowDown.isHighlighted = true
+        case priceTextField:
+            if let value = textField.text, !value.isEmpty && value.last == "$" {
+                priceTextField.text?.removeLast()
+            }
         default:
             break
         }
@@ -194,6 +202,8 @@ extension RecordFormViewController: UITextFieldDelegate, PhoneNumberTextFieldDel
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == dateTextField || textField == timeTextField {
             return false
+        } else if textField == priceTextField {
+            return priceTextField.textField(textField, shouldChangeCharactersIn: range, replacementString: string)
         }
         return true
     }
