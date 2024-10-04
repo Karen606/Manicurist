@@ -24,7 +24,6 @@ class CatalogViewController: UIViewController {
     
     func setupUI() {
         setNavigationMenuButton()
-        setNavigationFinanceButton()
     }
     
     func setupCollectionView() {

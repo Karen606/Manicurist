@@ -30,7 +30,6 @@
 		6B0C1CEB2CAA03D100C701D1 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CE82CAA03D100C701D1 /* ReportsViewController.swift */; };
 		6B0C1CEF2CAA041300C701D1 /* ReportsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0C1CEE2CAA041300C701D1 /* ReportsCollectionViewCell.xib */; };
 		6B0C1CF02CAA041300C701D1 /* ReportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CED2CAA041300C701D1 /* ReportsCollectionViewCell.swift */; };
-		6B0C1CF62CAA194500C701D1 /* FLCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0C1CF52CAA194500C701D1 /* FLCharts */; };
 		6B0C1CF92CAA233E00C701D1 /* ReportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C1CF82CAA233E00C701D1 /* ReportsViewModel.swift */; };
 		6BB222822CA6DFED00473864 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222812CA6DFED00473864 /* Image.swift */; };
 		6BB222842CA6EC4D00473864 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB222832CA6EC4D00473864 /* BaseButton.swift */; };
@@ -81,9 +80,16 @@
 		6BCA1CD72CA6CFC800283FDB /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCA1CD62CA6CFC800283FDB /* BaseTextField.swift */; };
 		6BCA1CDC2CA6D7A600283FDB /* RecordFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCA1CDA2CA6D7A600283FDB /* RecordFormViewController.swift */; };
 		6BCA1CDD2CA6D7A600283FDB /* RecordFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCA1CDB2CA6D7A600283FDB /* RecordFormViewController.xib */; };
+		6BE4DA152CAF1406003846F4 /* ExpensesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4DA142CAF1406003846F4 /* ExpensesViewController.xib */; };
+		6BE4DA162CAF1406003846F4 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4DA132CAF1406003846F4 /* ExpensesViewController.swift */; };
+		6BE4DA192CAF1B51003846F4 /* ExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4DA182CAF1B51003846F4 /* ExpensesModel.swift */; };
+		6BE4DA1D2CAF1B9A003846F4 /* ExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4DA1C2CAF1B9A003846F4 /* ExpensesViewModel.swift */; };
+		AF1A368AB46CD313F4B80FCA /* Pods_Manicurist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430734DC9085222FC46CCF6F /* Pods_Manicurist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ECD551DA4FE64B1E901F96A /* Pods-Manicurist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manicurist.release.xcconfig"; path = "Target Support Files/Pods-Manicurist/Pods-Manicurist.release.xcconfig"; sourceTree = "<group>"; };
+		430734DC9085222FC46CCF6F /* Pods_Manicurist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manicurist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0C1CB12CA88A7700C701D1 /* DesignFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignFormViewController.swift; sourceTree = "<group>"; };
 		6B0C1CB22CA88A7700C701D1 /* DesignFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignFormViewController.xib; sourceTree = "<group>"; };
 		6B0C1CB52CA88C9500C701D1 /* BaseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextView.swift; sourceTree = "<group>"; };
@@ -159,6 +165,11 @@
 		6BCA1CD62CA6CFC800283FDB /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		6BCA1CDA2CA6D7A600283FDB /* RecordFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordFormViewController.swift; sourceTree = "<group>"; };
 		6BCA1CDB2CA6D7A600283FDB /* RecordFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordFormViewController.xib; sourceTree = "<group>"; };
+		6BE4DA132CAF1406003846F4 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		6BE4DA142CAF1406003846F4 /* ExpensesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesViewController.xib; sourceTree = "<group>"; };
+		6BE4DA182CAF1B51003846F4 /* ExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesModel.swift; sourceTree = "<group>"; };
+		6BE4DA1C2CAF1B9A003846F4 /* ExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewModel.swift; sourceTree = "<group>"; };
+		B3869E84F11FF4D0CCEF20EB /* Pods-Manicurist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manicurist.debug.xcconfig"; path = "Target Support Files/Pods-Manicurist/Pods-Manicurist.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B0C1CF62CAA194500C701D1 /* FLCharts in Frameworks */,
+				AF1A368AB46CD313F4B80FCA /* Pods_Manicurist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +473,8 @@
 			children = (
 				6BCA1C8E2CA5DF9800283FDB /* Manicurist */,
 				6BCA1C8D2CA5DF9800283FDB /* Products */,
+				B3E219213E906C91DF13D192 /* Pods */,
+				CCF7933A38123760428614ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -476,6 +489,7 @@
 		6BCA1C8E2CA5DF9800283FDB /* Manicurist */ = {
 			isa = PBXGroup;
 			children = (
+				6BE4DA112CAF13E8003846F4 /* Expenses */,
 				6B0C1CE62CAA03B700C701D1 /* Reports */,
 				6B0C1CD02CA9ADD500C701D1 /* StocksOfMaterials */,
 				6BB222AB2CA8125B00473864 /* Catalog */,
@@ -590,6 +604,66 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6BE4DA112CAF13E8003846F4 /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4DA1A2CAF1B82003846F4 /* ViewModel */,
+				6BE4DA172CAF1B46003846F4 /* Model */,
+				6BE4DA122CAF13F1003846F4 /* View */,
+			);
+			path = Expenses;
+			sourceTree = "<group>";
+		};
+		6BE4DA122CAF13F1003846F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4DA132CAF1406003846F4 /* ExpensesViewController.swift */,
+				6BE4DA142CAF1406003846F4 /* ExpensesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BE4DA172CAF1B46003846F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4DA182CAF1B51003846F4 /* ExpensesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BE4DA1A2CAF1B82003846F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4DA1B2CAF1B8A003846F4 /* ExpensesViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6BE4DA1B2CAF1B8A003846F4 /* ExpensesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BE4DA1C2CAF1B9A003846F4 /* ExpensesViewModel.swift */,
+			);
+			path = ExpensesViewModel;
+			sourceTree = "<group>";
+		};
+		B3E219213E906C91DF13D192 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3869E84F11FF4D0CCEF20EB /* Pods-Manicurist.debug.xcconfig */,
+				3ECD551DA4FE64B1E901F96A /* Pods-Manicurist.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCF7933A38123760428614ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				430734DC9085222FC46CCF6F /* Pods_Manicurist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -597,9 +671,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BCA1CA32CA5DF9A00283FDB /* Build configuration list for PBXNativeTarget "Manicurist" */;
 			buildPhases = (
+				BC3DDC14643306BEEA51D91E /* [CP] Check Pods Manifest.lock */,
 				6BCA1C882CA5DF9800283FDB /* Sources */,
 				6BCA1C892CA5DF9800283FDB /* Frameworks */,
 				6BCA1C8A2CA5DF9800283FDB /* Resources */,
+				DB8D3AF6E1724E992FFE2693 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -607,7 +683,6 @@
 			);
 			name = Manicurist;
 			packageProductDependencies = (
-				6B0C1CF52CAA194500C701D1 /* FLCharts */,
 			);
 			productName = Manicurist;
 			productReference = 6BCA1C8C2CA5DF9800283FDB /* Manicurist.app */;
@@ -638,7 +713,6 @@
 			);
 			mainGroup = 6BCA1C832CA5DF9800283FDB;
 			packageReferences = (
-				6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */,
 			);
 			productRefGroup = 6BCA1C8D2CA5DF9800283FDB /* Products */;
 			projectDirPath = "";
@@ -655,6 +729,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B0C1CB32CA88A7700C701D1 /* DesignFormViewController.xib in Resources */,
+				6BE4DA152CAF1406003846F4 /* ExpensesViewController.xib in Resources */,
 				6BCA1CBB2CA6B5FC00283FDB /* ADLaMDisplay-Regular.ttf in Resources */,
 				6BCA1CDD2CA6D7A600283FDB /* RecordFormViewController.xib in Resources */,
 				6BCA1C9C2CA5DF9A00283FDB /* Assets.xcassets in Resources */,
@@ -685,6 +760,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BC3DDC14643306BEEA51D91E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Manicurist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB8D3AF6E1724E992FFE2693 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manicurist/Pods-Manicurist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manicurist/Pods-Manicurist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Manicurist/Pods-Manicurist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6BCA1C882CA5DF9800283FDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -707,8 +824,10 @@
 				6BCA1CDC2CA6D7A600283FDB /* RecordFormViewController.swift in Sources */,
 				6BB222B32CA861A100473864 /* DesignsViewModel.swift in Sources */,
 				6BCA1CB62CA6B37A00283FDB /* InfoViewController.swift in Sources */,
+				6BE4DA162CAF1406003846F4 /* ExpensesViewController.swift in Sources */,
 				6B0C1CBE2CA99D5300C701D1 /* NavigationViewController.swift in Sources */,
 				6B0C1CBB2CA8B94900C701D1 /* DesignFormViewModel.swift in Sources */,
+				6BE4DA192CAF1B51003846F4 /* ExpensesModel.swift in Sources */,
 				6BCA1CCB2CA6BCD300283FDB /* EdgeShadowLayer.swift in Sources */,
 				6BB222982CA72DD700473864 /* RecordTableViewCell.swift in Sources */,
 				6BB222822CA6DFED00473864 /* Image.swift in Sources */,
@@ -733,6 +852,7 @@
 				6BCA1C922CA5DF9800283FDB /* SceneDelegate.swift in Sources */,
 				6BCA1CC92CA6B79A00283FDB /* StringKey.swift in Sources */,
 				6BCA1CAD2CA5E3E000283FDB /* UIView.swift in Sources */,
+				6BE4DA1D2CAF1B9A003846F4 /* ExpensesViewModel.swift in Sources */,
 				6BB222A82CA779C300473864 /* DesignViewController.swift in Sources */,
 				6BB222902CA6FD7400473864 /* RecordFormViewModel.swift in Sources */,
 				6B0C1CE02CA9C3E600C701D1 /* StocksOfMaterialsViewModel.swift in Sources */,
@@ -799,7 +919,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -862,7 +982,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -883,6 +1003,7 @@
 		};
 		6BCA1CA42CA5DF9A00283FDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3869E84F11FF4D0CCEF20EB /* Pods-Manicurist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -891,11 +1012,15 @@
 				DEVELOPMENT_TEAM = 9YUSQBCAX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Manicurist/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to choose photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Menu;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -911,6 +1036,7 @@
 		};
 		6BCA1CA52CA5DF9A00283FDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ECD551DA4FE64B1E901F96A /* Pods-Manicurist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -919,11 +1045,15 @@
 				DEVELOPMENT_TEAM = 9YUSQBCAX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Manicurist/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to choose photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Menu;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -959,25 +1089,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/francescoleoni98/FLCharts";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		6B0C1CF52CAA194500C701D1 /* FLCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6B0C1CF42CAA194500C701D1 /* XCRemoteSwiftPackageReference "FLCharts" */;
-			productName = FLCharts;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6BCA1C982CA5DF9800283FDB /* Manicurist.xcdatamodeld */ = {

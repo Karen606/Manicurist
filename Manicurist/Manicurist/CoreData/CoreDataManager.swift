@@ -232,4 +232,61 @@ class CoreDataManager {
             }
         }
     }
+    
+    func saveExpense(expensesModel: ExpensesModel?, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Expenses> = Expenses.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "date == %@", expensesModel?.date as NSDate? ?? NSDate())
+            do {
+                let existingExpenses = try backgroundContext.fetch(fetchRequest)
+                
+                if let existingExpense = existingExpenses.first {
+                    existingExpense.rent = (expensesModel?.rent ?? 0.0) + (existingExpense.rent)
+                    existingExpense.tools = (expensesModel?.tools ?? 0.0) + (existingExpense.tools)
+                    existingExpense.materials = (expensesModel?.materials ?? 0.0) + (existingExpense.materials)
+                } else {
+                    let newExpense = Expenses(context: backgroundContext)
+                    newExpense.date = expensesModel?.date
+                    newExpense.rent = expensesModel?.rent ?? 0.0
+                    newExpense.tools = expensesModel?.tools ?? 0.0
+                    newExpense.materials = expensesModel?.materials ?? 0.0
+                }
+                try backgroundContext.save()
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
+    
+    func fetchExpenses(completion: @escaping ([ExpensesModel], Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Expenses> = Expenses.fetchRequest()
+            do {
+                let fetchedExpenses = try backgroundContext.fetch(fetchRequest)
+                let expenses = fetchedExpenses.map { entity -> ExpensesModel in
+                    return ExpensesModel(
+                        date: entity.date,
+                        rent: entity.rent,
+                        tools: entity.tools,
+                        materials: entity.materials
+                    )
+                }
+                DispatchQueue.main.async {
+                    completion(expenses, nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion([], error)
+                }
+            }
+        }
+    }
+
 }

@@ -1,0 +1,6 @@
+framework module Pods_Manicurist {
+  umbrella header "Pods-Manicurist-umbrella.h"
+
+  export *
+  module * { export * }
+}

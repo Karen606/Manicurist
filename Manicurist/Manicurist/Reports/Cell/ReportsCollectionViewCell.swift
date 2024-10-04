@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FLCharts
 
 class ReportsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var expensessView: UIView!
@@ -31,11 +30,9 @@ class ReportsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var toolsPrice: UILabel!
     @IBOutlet weak var materials: UILabel!
     @IBOutlet weak var materialsPrice: UILabel!
-    @IBOutlet weak var chart: FLPieChart!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        chart.setup(title: "Test", border: .width(20), formatter: .decimal(2), animated: true, data: [.init(value: 1000, key: .init(key: "Rent", value: 1000, color: .red)), .init(value: 5000, key: .init(key: "Marerial", value: 5000, color: .blue)), .init(value: 7000, key: .init(key: "gorc", value: 7000, color: .green))])
         income.font = .medium(size: 18)
         month.font = .medium(size: 18)
         totalPrice.font = .medium(size: 32)
